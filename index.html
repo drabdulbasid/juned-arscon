@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17232d">
+  <meta name="description" content="Industrial valves and flow-control solutions for energy, water and process industries. Request a quotation from Arscon Valves, Sharjah, UAE.">
+  <title>Arscon Valves | Flow control, engineered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17232d;
+      --navy: #1b2631;
+      --steel: #2c3e50;
+      --orange: #e67e22;
+      --orange-dark: #bc5d10;
+      --paper: #f5f5f2;
+      --white: #fff;
+      --muted: #69747c;
+      --line: #dce0df;
+      --green: #34745f;
+      --heading: "Barlow Condensed", "Arial Narrow", sans-serif;
+      --body: "Manrope", "Segoe UI", sans-serif;
+      font-family: var(--body);
+      color: var(--ink);
+      background: var(--paper);
+      font-synthesis: none;
+      text-rendering: optimizeLegibility;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; min-width: 320px; }
+    button, input, select, textarea { font: inherit; }
+    button, a, select { -webkit-tap-highlight-color: transparent; }
+    button { cursor: pointer; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { width: min(1220px, calc(100% - 64px)); margin: 0 auto; }
+    .eyebrow { margin: 0; color: var(--orange-dark); font-size: 11px; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
+    .topline { background: var(--navy); color: #d6dcdf; font-size: 11px; }
+    .topline-inner { display: flex; justify-content: space-between; align-items: center; min-height: 34px; }
+    .topline a { color: #fff; }
+    .topline-meta { display: flex; gap: 24px; align-items: center; }
+    .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.97); border-bottom: 1px solid #e9ebea; }
+    .nav-row { display: flex; align-items: center; min-height: 76px; gap: 32px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; min-width: 204px; }
+    .brand-mark { display: grid; width: 42px; height: 42px; place-items: center; background: var(--orange); color: white; font-family: var(--heading); font-size: 27px; font-weight: 700; line-height: 1; }
+    .brand-name { display: block; font-size: 16px; font-weight: 800; letter-spacing: .035em; line-height: 1.1; }
+    .brand-sub { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; font-weight: 700; letter-spacing: .16em; }
+    .main-nav { display: flex; align-items: center; gap: 28px; margin-left: auto; color: #3d4950; font-size: 12px; font-weight: 700; }
+    .main-nav a:hover { color: var(--orange-dark); }
+    .nav-actions { display: flex; gap: 10px; align-items: center; }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 9px; min-height: 44px; padding: 0 17px; border: 1px solid transparent; background: var(--orange); color: #fff; font-size: 12px; font-weight: 800; transition: background .18s ease, transform .18s ease; }
+    .button:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .button-dark { background: var(--navy); }
+    .button-dark:hover { background: #30414e; }
+    .button-quiet { min-height: 40px; border-color: var(--line); background: #fff; color: var(--ink); }
+    .button-quiet:hover { background: #f2f4f3; }
+    .button-small { min-height: 35px; padding: 0 12px; font-size: 11px; }
+    .quote-count { display: inline-grid; min-width: 19px; height: 19px; place-items: center; padding: 0 4px; background: rgba(255,255,255,.23); font-size: 10px; }
+    .mobile-menu { display: none; }
+    .hero { overflow: hidden; position: relative; background: var(--navy); color: #fff; }
+    .hero::after { content: ""; position: absolute; top: 0; right: 0; width: 46%; height: 100%; background: linear-gradient(90deg, #1b2631 0%, rgba(27,38,49,.13) 48%, rgba(27,38,49,.05) 100%), url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1500&q=85") center 48% / cover; opacity: .88; }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.1fr .9fr; min-height: 480px; align-items: center; }
+    .hero-copy { max-width: 680px; padding: 75px 0 78px; }
+    .hero .eyebrow { color: #f2a45e; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 650px; margin: 16px 0 18px; font-family: var(--heading); font-size: clamp(54px, 6.4vw, 84px); font-weight: 600; letter-spacing: .005em; line-height: .94; text-transform: uppercase; }
+    .hero-copy > p:not(.eyebrow) { max-width: 510px; margin-bottom: 28px; color: #d5dcdf; font-size: 14px; line-height: 1.8; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 11px; }
+    .hero .button-quiet { border-color: rgba(255,255,255,.38); background: transparent; color: #fff; }
+    .hero .button-quiet:hover { background: rgba(255,255,255,.09); }
+    .hero-side { align-self: end; justify-self: end; width: 250px; margin: 0 12px 35px 0; padding: 17px 19px; border-left: 3px solid var(--orange); background: rgba(20,31,40,.78); backdrop-filter: blur(5px); }
+    .hero-side strong { display: block; font-family: var(--heading); font-size: 23px; font-weight: 600; text-transform: uppercase; }
+    .hero-side span { display: block; margin-top: 3px; color: #c6cdd1; font-size: 10px; }
+    .proofbar { background: #fff; border-bottom: 1px solid var(--line); }
+    .proof-grid { display: grid; grid-template-columns: repeat(4,1fr); min-height: 86px; align-items: center; }
+    .proof-item { min-height: 40px; padding: 0 22px; border-right: 1px solid var(--line); }
+    .proof-item:first-child { padding-left: 0; }
+    .proof-item:last-child { border: 0; }
+    .proof-item strong { display: block; font-size: 11px; font-weight: 800; }
+    .proof-item span { display: block; margin-top: 4px; color: var(--muted); font-size: 10px; }
+    .section { padding: 88px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 26px; }
+    .section-head h2 { margin: 7px 0 0; font-family: var(--heading); font-size: 43px; font-weight: 600; line-height: 1; text-transform: uppercase; }
+    .section-head > p { max-width: 370px; margin: 0 0 2px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+    .catalog-tools { display: grid; grid-template-columns: minmax(220px,1fr) repeat(3,minmax(145px,190px)); gap: 9px; margin-bottom: 22px; }
+    .field-control { width: 100%; min-height: 44px; padding: 0 12px; border: 1px solid #d6dcdb; border-radius: 0; outline: 0; background: #fff; color: var(--ink); font-size: 11px; }
+    .field-control:focus { border-color: var(--orange); box-shadow: 0 0 0 2px rgba(230,126,34,.13); }
+    .catalog-meta { display: flex; justify-content: space-between; align-items: center; min-height: 33px; margin-bottom: 13px; color: var(--muted); font-size: 10px; }
+    .catalog-meta strong { color: var(--ink); }
+    .product-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+    .product-card { display: flex; min-width: 0; flex-direction: column; background: #fff; border: 1px solid #e1e5e3; transition: border-color .18s ease, transform .18s ease; }
+    .product-card:hover { transform: translateY(-3px); border-color: #bdc5c4; }
+    .product-image { position: relative; height: 194px; overflow: hidden; background: #dce2e1; }
+    .product-image img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+    .product-card:hover .product-image img { transform: scale(1.035); }
+    .sku-tag { position: absolute; top: 12px; left: 12px; padding: 6px 8px; background: rgba(27,38,49,.92); color: white; font-size: 9px; font-weight: 700; letter-spacing: .06em; }
+    .stock-tag { position: absolute; right: 11px; bottom: 11px; padding: 6px 8px; background: rgba(255,255,255,.94); color: var(--green); font-size: 9px; font-weight: 800; }
+    .product-content { display: flex; flex: 1; flex-direction: column; padding: 17px; }
+    .product-category { color: var(--orange-dark); font-size: 9px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .product-content h3 { margin: 7px 0 8px; font-size: 15px; font-weight: 800; line-height: 1.4; }
+    .product-content > p { min-height: 51px; margin-bottom: 13px; color: var(--muted); font-size: 10px; line-height: 1.7; }
+    .spec-pills { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 16px; }
+    .spec-pill { padding: 5px 7px; background: #f1f3f2; color: #4d5a60; font-size: 9px; font-weight: 700; }
+    .product-actions { display: flex; justify-content: space-between; gap: 8px; margin-top: auto; padding-top: 13px; border-top: 1px solid #edf0ef; }
+    .text-button { padding: 0; border: 0; background: transparent; color: var(--steel); font-size: 10px; font-weight: 800; }
+    .text-button:hover { color: var(--orange-dark); }
+    .empty-state { grid-column: 1/-1; padding: 58px 20px; border: 1px dashed #cdd4d2; background: rgba(255,255,255,.52); text-align: center; }
+    .empty-state strong { display: block; margin-bottom: 6px; font-size: 14px; }
+    .empty-state p { margin: 0; color: var(--muted); font-size: 11px; }
+    .catalog-loading { grid-column: 1/-1; padding: 42px; color: var(--muted); font-size: 12px; text-align: center; }
+    .sectors { background: #e9ece9; }
+    .sector-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; }
+    .sector-copy h2 { max-width: 550px; margin: 9px 0 16px; font-family: var(--heading); font-size: 48px; font-weight: 600; line-height: .98; text-transform: uppercase; }
+    .sector-copy > p:not(.eyebrow) { max-width: 480px; color: #5e6a70; font-size: 12px; line-height: 1.8; }
+    .sector-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 0 24px; margin-top: 27px; }
+    .sector-list span { padding: 13px 0; border-top: 1px solid #cbd2cf; font-size: 11px; font-weight: 800; }
+    .sector-visual { position: relative; min-height: 330px; background: url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1000&q=82") center / cover; }
+    .sector-visual::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg,rgba(20,31,40,.55),transparent 60%); }
+    .sector-caption { position: absolute; z-index: 1; right: -18px; bottom: -18px; width: 210px; padding: 19px; background: var(--orange); color: #fff; }
+    .sector-caption strong { display: block; font-family: var(--heading); font-size: 25px; text-transform: uppercase; }
+    .sector-caption span { display: block; margin-top: 3px; font-size: 10px; }
+    .process { background: var(--navy); color: #fff; }
+    .process .eyebrow { color: #f2a45e; }
+    .process .section-head h2 { color: #fff; }
+    .process .section-head > p { color: #b6c0c4; }
+    .process-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 0; border-top: 1px solid rgba(255,255,255,.19); }
+    .process-step { position: relative; padding: 26px 25px 8px 0; }
+    .process-step + .process-step { padding-left: 25px; border-left: 1px solid rgba(255,255,255,.19); }
+    .step-no { color: #f2a45e; font-family: var(--heading); font-size: 32px; }
+    .process-step h3 { margin: 10px 0 8px; font-size: 14px; }
+    .process-step p { max-width: 300px; margin: 0; color: #b6c0c4; font-size: 10px; line-height: 1.8; }
+    .contact-band { padding: 50px 0; background: var(--orange); color: white; }
+    .contact-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; }
+    .contact-inner h2 { margin: 4px 0 0; font-family: var(--heading); font-size: 37px; font-weight: 600; text-transform: uppercase; }
+    .contact-inner p { margin: 0; font-size: 11px; }
+    .contact-band .button { border-color: rgba(255,255,255,.8); background: transparent; }
+    .contact-band .button:hover { background: rgba(255,255,255,.15); }
+    footer { padding: 36px 0 20px; background: #121c24; color: #c6ced1; }
+    .footer-grid { display: grid; grid-template-columns: 1.3fr 1fr 1fr; gap: 38px; padding-bottom: 26px; }
+    footer .brand-name { color: white; }
+    footer .brand-sub { color: #98a4a9; }
+    .footer-note { max-width: 310px; margin: 16px 0 0; color: #9da9ae; font-size: 10px; line-height: 1.8; }
+    .footer-heading { margin: 2px 0 13px; color: white; font-size: 10px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-links { display: grid; gap: 9px; font-size: 10px; }
+    .footer-bottom { display: flex; justify-content: space-between; gap: 15px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.14); color: #89969c; font-size: 9px; }
+    .quote-dock { position: fixed; z-index: 24; right: 22px; bottom: 20px; display: none; align-items: center; gap: 15px; padding: 11px 12px 11px 17px; background: var(--navy); color: white; box-shadow: 0 9px 32px rgba(19,30,38,.24); }
+    .quote-dock.show { display: flex; }
+    .quote-dock small { display: block; color: #b5c0c4; font-size: 9px; }
+    .quote-dock strong { display: block; margin-top: 2px; font-size: 11px; }
+    .modal-backdrop { position: fixed; z-index: 50; inset: 0; display: none; align-items: center; justify-content: center; padding: 20px; background: rgba(13,22,29,.67); }
+    .modal-backdrop.open { display: flex; }
+    .modal { position: relative; width: min(690px,100%); max-height: min(90vh,900px); overflow: auto; background: var(--paper); box-shadow: 0 25px 85px rgba(0,0,0,.27); animation: arrive .18s ease-out; }
+    .modal-wide { width: min(900px,100%); }
+    @keyframes arrive { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .modal-head { display: flex; justify-content: space-between; align-items: start; gap: 16px; padding: 22px 25px 17px; border-bottom: 1px solid var(--line); background: white; }
+    .modal-head h2 { margin: 5px 0 0; font-family: var(--heading); font-size: 31px; font-weight: 600; text-transform: uppercase; }
+    .close-button { display: grid; width: 35px; height: 35px; flex: 0 0 35px; place-items: center; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 20px; }
+    .modal-body { padding: 22px 25px 26px; }
+    .modal-intro { margin: 0 0 19px; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .form-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; }
+    .form-field { display: grid; gap: 6px; }
+    .form-field.full { grid-column: 1/-1; }
+    .form-field label { font-size: 10px; font-weight: 800; }
+    .form-field input, .form-field textarea, .form-field select { width: 100%; min-height: 42px; padding: 10px 11px; border: 1px solid #d5dcda; border-radius: 0; outline: none; background: #fff; font-size: 11px; }
+    .form-field textarea { min-height: 92px; resize: vertical; }
+    .form-field input:focus, .form-field textarea:focus { border-color: var(--orange); }
+    .form-hint { color: var(--muted); font-size: 9px; line-height: 1.6; }
+    .modal-actions { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 19px; }
+    .form-error { display: none; margin-top: 12px; padding: 10px 12px; background: #fbe8e3; color: #9c3925; font-size: 10px; }
+    .form-error.show { display: block; }
+    .quote-items { display: grid; gap: 9px; margin-bottom: 19px; }
+    .quote-line { display: grid; grid-template-columns: 58px 1fr 82px 34px; gap: 12px; align-items: center; padding: 10px; background: white; border: 1px solid #e4e8e6; }
+    .quote-line img { width: 58px; height: 50px; object-fit: cover; }
+    .quote-line strong { display: block; font-size: 10px; }
+    .quote-line small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; }
+    .quantity-input { width: 76px; min-height: 34px; padding: 0 7px; border: 1px solid var(--line); font-size: 10px; }
+    .remove-item { width: 31px; height: 31px; border: 1px solid var(--line); background: white; color: #8b4d3b; font-size: 16px; }
+    .detail-layout { display: grid; grid-template-columns: .85fr 1.15fr; gap: 23px; }
+    .detail-photo { width: 100%; min-height: 230px; max-height: 330px; object-fit: cover; }
+    .detail-description { margin: 0 0 15px; color: #536168; font-size: 11px; line-height: 1.8; }
+    .spec-table { width: 100%; border-collapse: collapse; background: white; font-size: 10px; }
+    .spec-table th, .spec-table td { padding: 9px 10px; border-bottom: 1px solid #edf0ef; text-align: left; vertical-align: top; }
+    .spec-table th { width: 37%; color: #6c777b; font-weight: 700; }
+    .detail-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+    .metric-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-bottom: 20px; }
+    .metric { padding: 15px; border: 1px solid var(--line); background: white; }
+    .metric span { display: block; color: var(--muted); font-size: 9px; }
+    .metric strong { display: block; margin-top: 7px; font-family: var(--heading); font-size: 29px; font-weight: 600; }
+    .dashboard-table { width: 100%; border-collapse: collapse; background: white; font-size: 10px; }
+    .dashboard-table th, .dashboard-table td { padding: 11px 10px; border-bottom: 1px solid #e8ecea; text-align: left; }
+    .dashboard-table th { color: #68747a; font-size: 9px; text-transform: uppercase; }
+    .status-select { min-height: 31px; padding: 0 7px; border: 1px solid var(--line); background: white; font-size: 9px; }
+    .toast { position: fixed; z-index: 80; left: 50%; bottom: 22px; max-width: calc(100vw - 32px); padding: 12px 16px; transform: translate(-50%,20px); opacity: 0; pointer-events: none; background: var(--navy); color: #fff; box-shadow: 0 8px 26px rgba(0,0,0,.19); font-size: 11px; transition: .2s ease; }
+    .toast.show { transform: translate(-50%,0); opacity: 1; }
+    .toast.error { background: #9c3925; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+    @media (max-width: 900px) {
+      .wrap { width: min(100% - 40px,720px); }
+      .main-nav { gap: 15px; }
+      .brand { min-width: 170px; }
+      .nav-row { gap: 15px; }
+      .hero-grid { grid-template-columns: 1fr .6fr; }
+      .hero::after { width: 53%; }
+      .catalog-tools { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .product-grid { grid-template-columns: repeat(2,minmax(0,1fr)); }
+      .sector-grid { gap: 35px; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: calc(100% - 34px); }
+      .topline-inner { min-height: 31px; }
+      .topline-meta { gap: 12px; }
+      .topline-meta span:first-child { display: none; }
+      .nav-row { min-height: 65px; gap: 9px; }
+      .brand { min-width: unset; gap: 8px; }
+      .brand-mark { width: 37px; height: 37px; font-size: 24px; }
+      .brand-name { font-size: 13px; }
+      .brand-sub { font-size: 8px; }
+      .main-nav { position: absolute; top: 64px; right: 0; left: 0; display: none; padding: 14px 20px 18px; background: white; border-bottom: 1px solid var(--line); }
+      .main-nav.open { display: grid; gap: 0; }
+      .main-nav a { padding: 12px 0; border-bottom: 1px solid #edf0ef; }
+      .mobile-menu { display: inline-flex; min-width: 37px; min-height: 37px; justify-content: center; align-items: center; border: 1px solid var(--line); background: white; color: var(--ink); font-size: 18px; }
+      .nav-actions { margin-left: auto; }
+      .nav-actions .button { min-height: 37px; padding: 0 10px; font-size: 10px; }
+      .nav-actions .team-link { display: none; }
+      .hero::after { width: 100%; background: linear-gradient(90deg,rgba(27,38,49,.98),rgba(27,38,49,.83) 62%,rgba(27,38,49,.55)), url("https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1100&q=80") center / cover; opacity: .77; }
+      .hero-grid { display: block; min-height: 444px; }
+      .hero-copy { padding: 70px 0 78px; }
+      h1 { max-width: 500px; font-size: 62px; }
+      .hero-copy > p:not(.eyebrow) { max-width: 410px; font-size: 12px; }
+      .hero-side { display: none; }
+      .proof-grid { grid-template-columns: repeat(2,1fr); padding: 12px 0; }
+      .proof-item { min-height: 48px; padding: 7px 10px; border-right: 0; }
+      .proof-item:nth-child(odd) { border-right: 1px solid var(--line); }
+      .proof-item:first-child { padding-left: 10px; }
+      .section { padding: 62px 0; }
+      .section-head { display: block; margin-bottom: 21px; }
+      .section-head h2 { font-size: 38px; }
+      .section-head > p { margin-top: 11px; }
+      .catalog-tools { grid-template-columns: 1fr 1fr; gap: 7px; }
+      .catalog-tools .search-control { grid-column: 1/-1; }
+      .field-control { min-height: 42px; font-size: 10px; }
+      .product-grid { gap: 10px; }
+      .product-image { height: 137px; }
+      .product-content { padding: 12px; }
+      .product-content h3 { font-size: 12px; }
+      .product-content > p { min-height: 67px; font-size: 9px; }
+      .spec-pill { font-size: 8px; }
+      .product-actions { align-items: center; gap: 4px; }
+      .text-button { font-size: 9px; }
+      .product-actions .button { min-height: 32px; padding: 0 8px; font-size: 9px; }
+      .sku-tag { top: 7px; left: 7px; padding: 5px 6px; font-size: 8px; }
+      .stock-tag { right: 6px; bottom: 6px; padding: 5px; font-size: 8px; }
+      .sector-grid { grid-template-columns: 1fr; gap: 24px; }
+      .sector-copy h2 { font-size: 42px; }
+      .sector-visual { min-height: 240px; margin-right: 10px; }
+      .sector-caption { right: -10px; bottom: -12px; width: 172px; padding: 14px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .process-step, .process-step + .process-step { padding: 18px 0; border-left: 0; border-bottom: 1px solid rgba(255,255,255,.17); }
+      .contact-inner { align-items: flex-start; flex-direction: column; }
+      .contact-inner h2 { font-size: 32px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 26px 18px; }
+      .footer-grid > :first-child { grid-column: 1/-1; }
+      .footer-bottom { flex-direction: column; }
+      .quote-dock { right: 10px; bottom: 10px; left: 10px; justify-content: space-between; }
+      .modal-backdrop { align-items: end; padding: 0; }
+      .modal { max-height: 92vh; }
+      .modal-head { padding: 18px 17px 14px; }
+      .modal-body { padding: 18px 17px 22px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .form-field.full { grid-column: auto; }
+      .quote-line { grid-template-columns: 48px 1fr 65px 30px; gap: 7px; padding: 8px; }
+      .quote-line img { width: 48px; height: 43px; }
+      .quantity-input { width: 62px; }
+      .detail-layout { grid-template-columns: 1fr; }
+      .detail-photo { min-height: 180px; max-height: 230px; }
+      .metric-grid { grid-template-columns: repeat(2,1fr); }
+      .table-scroll { overflow-x: auto; }
+      .dashboard-table { min-width: 620px; }
+      .modal-actions { align-items: stretch; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topline">
+    <div class="wrap topline-inner">
+      <span>Flow control for critical industries</span>
+      <div class="topline-meta"><span>Sharjah, United Arab Emirates</span></div>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="wrap nav-row">
+      <a class="brand" href="#home" aria-label="Arscon Valves home">
+        <span class="brand-mark">A</span>
+        <span><span class="brand-name">ARSCON VALVES</span><span class="brand-sub">ENGINEERED FLOW CONTROL</span></span>
+      </a>
+      <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+        <a href="#catalog">Products</a><a href="#industries">Industries</a><a href="#process">How we work</a><a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="button button-quiet team-link" type="button" id="team-login">Team access</button>
+        <button class="button" type="button" data-open-quotes>Quote list <span class="quote-count" id="header-count">0</span></button>
+      </div>
+      <button class="mobile-menu" type="button" id="mobile-menu" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Arscon Valves Co. L.L.C. &nbsp; / &nbsp; Sharjah, UAE</p>
+          <h1>Flow control,<br>engineered.</h1>
+          <p>Industrial valves and dependable supply for the systems that keep energy, water and process industries moving.</p>
+          <div class="hero-buttons"><a class="button" href="#catalog">Explore the range <span aria-hidden="true">&#8594;</span></a><a class="button button-quiet" href="#contact">Talk to our team</a></div>
+        </div>
+        <div class="hero-side"><strong>Built for demanding service</strong><span>Technical support. Responsive quotations. Reliable delivery.</span></div>
+      </div>
+    </section>
+
+    <section class="proofbar" aria-label="Company capabilities">
+      <div class="wrap proof-grid">
+        <div class="proof-item"><strong>Industrial valve specialists</strong><span>Isolation, control and flow protection</span></div>
+        <div class="proof-item"><strong>Standards-led selection</strong><span>API, ASME, EN and more</span></div>
+        <div class="proof-item"><strong>Project-ready quotations</strong><span>Technical requirements welcomed</span></div>
+        <div class="proof-item"><strong>Sharjah, UAE</strong><span>Regional supply and support</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="catalog">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="eyebrow">Product range</p><h2>Find the right valve</h2></div>
+          <p>Browse our industrial range, compare key specifications and build a request for quotation around your project.</p>
+        </div>
+        <div class="catalog-tools" role="search">
+          <label class="sr-only" for="search-products">Search products</label><input class="field-control search-control" id="search-products" type="search" placeholder="Search product, material or standard...">
+          <label class="sr-only" for="filter-category">Filter by product type</label><select class="field-control" id="filter-category"><option value="">All valve types</option></select>
+          <label class="sr-only" for="filter-material">Filter by material</label><select class="field-control" id="filter-material"><option value="">All materials</option></select>
+          <label class="sr-only" for="filter-standard">Filter by standard</label><select class="field-control" id="filter-standard"><option value="">All standards</option></select>
+        </div>
+        <div class="catalog-meta"><span id="catalog-count">Loading product range...</span><span>Specifications subject to project confirmation</span></div>
+        <div class="product-grid" id="product-grid"><div class="catalog-loading">Loading product catalogue</div></div>
+      </div>
+    </section>
+
+    <section class="section sectors" id="industries">
+      <div class="wrap sector-grid">
+        <div class="sector-copy">
+          <p class="eyebrow">Applications</p>
+          <h2>Specified for the work that matters.</h2>
+          <p>Every application asks something different of a valve. Our team helps match materials, pressure class, end connections and applicable standards to your operating conditions.</p>
+          <div class="sector-list"><span>Oil &amp; gas</span><span>Water &amp; wastewater</span><span>Chemical processing</span><span>Power &amp; steam</span></div>
+        </div>
+        <div class="sector-visual" role="img" aria-label="Industrial process facility"><div class="sector-caption"><strong>Details matter.</strong><span>Tell us about your duty and conditions.</span></div></div>
+      </div>
+    </section>
+
+    <section class="section process" id="process">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">A clear path to supply</p><h2>From specification to shipment</h2></div><p>Bring us a product selection or a project brief. We will help turn the requirement into a quote-ready package.</p></div>
+        <div class="process-grid">
+          <article class="process-step"><span class="step-no">01</span><h3>Build your request</h3><p>Add products to your quote list, set quantities and include your project details or technical documents.</p></article>
+          <article class="process-step"><span class="step-no">02</span><h3>Technical review</h3><p>Our team reviews the requested specifications, service conditions and delivery requirements.</p></article>
+          <article class="process-step"><span class="step-no">03</span><h3>Receive your quotation</h3><p>We follow up with availability, lead time and a commercial offer tailored to your inquiry.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-band" id="contact">
+      <div class="wrap contact-inner"><div><p class="eyebrow" style="color:#fff">Have a project in mind?</p><h2>Let's get the specification right.</h2><p>Share your requirement with the Arscon team.</p></div><a class="button" href="#catalog">Browse products <span aria-hidden="true">&#8594;</span></a></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div><a class="brand" href="#home"><span class="brand-mark">A</span><span><span class="brand-name">ARSCON VALVES</span><span class="brand-sub">ENGINEERED FLOW CONTROL</span></span></a><p class="footer-note">Industrial valve supply for oil &amp; gas, water, chemical and process industries. Based in Sharjah, United Arab Emirates.</p></div>
+        <div><p class="footer-heading">Explore</p><div class="footer-links"><a href="#catalog">Product catalogue</a><a href="#industries">Industries served</a><a href="#process">Quotation process</a></div></div>
+        <div><p class="footer-heading">Get in touch</p><div class="footer-links"><a href="#catalog">Request a quotation</a><span>Sharjah, United Arab Emirates</span><button class="text-button" style="color:#c6ced1;text-align:left" type="button" id="footer-team">Team access</button></div></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; <span id="year"></span> Arscon Valves Co. L.L.C. All rights reserved.</span><span>Product data is indicative and subject to technical review.</span></div>
+    </div>
+  </footer>
+
+  <div class="quote-dock" id="quote-dock"><div><small>Quote list</small><strong><span id="dock-count">0</span> selected item(s)</strong></div><button class="button button-small" type="button" data-open-quotes>Review request <span aria-hidden="true">&#8594;</span></button></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="modal-backdrop" id="modal-backdrop" aria-hidden="true">
+    <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-head"><div><p class="eyebrow" id="modal-eyebrow">Arscon Valves</p><h2 id="modal-title">Request a quotation</h2></div><button class="close-button" type="button" aria-label="Close dialog" id="modal-close">&times;</button></div>
+      <div class="modal-body" id="modal-body"></div>
+    </section>
+  </div>
+
+  <script>
+    (() => {
+      const API = '';
+      const STORAGE_KEY = 'arscon-quote-list-v1';
+      const TOKEN_KEY = 'arscon-team-token-v1';
+      const state = { products: [], quoteItems: readQuoteItems(), activeProduct: null, toastTimer: null };
+      const grid = document.getElementById('product-grid');
+      const backdrop = document.getElementById('modal-backdrop');
+      const modal = document.getElementById('modal');
+      const body = document.getElementById('modal-body');
+      const esc = value => String(value ?? '').replace(/[&<>"']/g, char => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' })[char]);
+
+      function readQuoteItems() {
+        try { const data = JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]'); return Array.isArray(data) ? data : []; }
+        catch { return []; }
+      }
+      function saveQuoteItems() { localStorage.setItem(STORAGE_KEY, JSON.stringify(state.quoteItems)); updateQuoteCount(); }
+      function updateQuoteCount() {
+        const count = state.quoteItems.reduce((total, item) => total + item.quantity, 0);
+        document.getElementById('header-count').textContent = count;
+        document.getElementById('dock-count').textContent = count;
+        document.getElementById('quote-dock').classList.toggle('show', count > 0);
+      }
+      function notify(message, isError = false) {
+        const toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.classList.toggle('error', isError);
+        toast.classList.add('show');
+        clearTimeout(state.toastTimer);
+        state.toastTimer = setTimeout(() => toast.classList.remove('show'), 3100);
+      }
+      async function request(url, options = {}) {
+        const response = await fetch(API + url, { ...options, headers: { ...(options.body ? { 'Content-Type': 'application/json' } : {}), ...(options.headers || {}) } });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) throw new Error(data.error || `Request failed (${response.status})`);
+        return data;
+      }
+      function addQuoteItem(id) {
+        const found = state.quoteItems.find(item => item.productId === id);
+        if (found) found.quantity = Math.min(10000, found.quantity + 1);
+        else state.quoteItems.push({ productId: id, quantity: 1 });
+        saveQuoteItems();
+        notify('Product added to your quote list.');
+      }
+      function filterOptions(id, values, label) {
+        const select = document.getElementById(id);
+        const previous = select.value;
+        select.innerHTML = `<option value="">${label}</option>` + values.sort((a,b) => a.localeCompare(b)).map(value => `<option value="${esc(value)}">${esc(value)}</option>`).join('');
+        if (values.includes(previous)) select.value = previous;
+      }
+      function fillFilters() {
+        const unique = key => [...new Set(state.products.flatMap(product => product[key] || []))];
+        filterOptions('filter-category', unique('category'), 'All valve types');
+        filterOptions('filter-material', unique('constructionMaterials'), 'All materials');
+        filterOptions('filter-standard', unique('standards'), 'All standards');
+      }
+      function renderProducts() {
+        const search = document.getElementById('search-products').value.trim().toLowerCase();
+        const category = document.getElementById('filter-category').value;
+        const material = document.getElementById('filter-material').value;
+        const standard = document.getElementById('filter-standard').value;
+        const products = state.products.filter(product => {
+          const haystack = [product.name, product.sku, product.category, product.description, ...(product.constructionMaterials || []), ...(product.standards || [])].join(' ').toLowerCase();
+          return (!search || haystack.includes(search)) && (!category || product.category === category) && (!material || product.constructionMaterials.includes(material)) && (!standard || product.standards.includes(standard));
+        });
+        document.getElementById('catalog-count').innerHTML = `<strong>${products.length}</strong> product${products.length === 1 ? '' : 's'} shown`;
+        if (!products.length) {
+          grid.innerHTML = '<div class="empty-state"><strong>No products match those filters.</strong><p>Try another material, standard or search term.</p></div>';
+          return;
+        }
+        grid.innerHTML = products.map(product => `
+          <article class="product-card">
+            <div class="product-image"><img loading="lazy" src="${esc(product.imageUrl)}" alt="${esc(product.name)}" onerror="this.src='https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=75'"><span class="sku-tag">${esc(product.sku)}</span><span class="stock-tag">${product.stock > 0 ? `${Number(product.stock).toLocaleString()} available` : 'Check availability'}</span></div>
+            <div class="product-content"><span class="product-category">${esc(product.category)}</span><h3>${esc(product.name)}</h3><p>${esc(product.description)}</p>
+              <div class="spec-pills"><span class="spec-pill">${esc(product.pressureRatings[0] || 'Project rated')}</span><span class="spec-pill">${esc(product.constructionMaterials[0] || 'Multiple materials')}</span><span class="spec-pill">${esc(product.standards[0] || 'To specification')}</span></div>
+              <div class="product-actions"><button class="text-button" type="button" data-detail="${product.id}">View specifications</button><button class="button button-small" type="button" data-add="${product.id}">Add to quote +</button></div></div>
+          </article>`).join('');
+      }
+      function openModal(title, eyebrow, wide = false) {
+        document.getElementById('modal-title').textContent = title;
+        document.getElementById('modal-eyebrow').textContent = eyebrow;
+        modal.classList.toggle('modal-wide', wide);
+        backdrop.classList.add('open');
+        backdrop.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        document.getElementById('modal-close').focus();
+      }
+      function closeModal() {
+        backdrop.classList.remove('open');
+        backdrop.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      function closeOnEscape(event) { if (event.key === 'Escape' && backdrop.classList.contains('open')) closeModal(); }
+      function getProduct(id) { return state.products.find(item => item.id === Number(id)); }
+      function showDetail(product) {
+        if (!product) return;
+        state.activeProduct = product;
+        openModal('Product specifications', product.sku, true);
+        body.innerHTML = `<div class="detail-layout"><img class="detail-photo" src="${esc(product.imageUrl)}" alt="${esc(product.name)}"><div><h3 style="font-size:18px;margin:0 0 8px">${esc(product.name)}</h3><p class="detail-description">${esc(product.description)}</p><table class="spec-table"><tbody>
+          <tr><th>Category</th><td>${esc(product.category)}</td></tr><tr><th>Materials</th><td>${product.constructionMaterials.map(esc).join(', ')}</td></tr><tr><th>Pressure ratings</th><td>${product.pressureRatings.map(esc).join(', ')}</td></tr><tr><th>Size range</th><td>${esc(product.sizeRangeMin)}&quot; to ${esc(product.sizeRangeMax)}&quot;</td></tr><tr><th>End connections</th><td>${product.endConnections.map(esc).join(', ')}</td></tr><tr><th>Standards</th><td>${product.standards.map(esc).join(', ')}</td></tr><tr><th>Indicative lead time</th><td>${esc(product.leadTime)}</td></tr></tbody></table>
+          <div class="detail-actions"><button class="button button-small" type="button" id="detail-add">Add to quote +</button><button class="button button-small button-quiet" type="button" id="download-spec">Download PDF datasheet</button></div></div></div>`;
+        document.getElementById('detail-add').addEventListener('click', () => addQuoteItem(product.id));
+        document.getElementById('download-spec').addEventListener('click', () => downloadSpec(product));
+      }
+      function downloadSpec(product) {
+        const escapePdf = text => String(text).replace(/[^\x20-\x7E]/g, '?').replace(/[()\\]/g, '\\$&');
+        const wrap = (text, limit) => {
+          const words = String(text).split(/\s+/);
+          const lines = [];
+          let line = '';
+          for (const word of words) {
+            if (line && `${line} ${word}`.length > limit) { lines.push(line); line = word; }
+            else line = line ? `${line} ${word}` : word;
+          }
+          if (line) lines.push(line);
+          return lines;
+        };
+        const commands = ['0.09 0.14 0.19 rg 0 696 612 96 re f'];
+        const addText = (x, y, size, text, color = '0.13 0.19 0.24') => {
+          commands.push(`${color} rg BT /F1 ${size} Tf ${x} ${y} Td (${escapePdf(text)}) Tj ET`);
+        };
+        addText(46, 767, 9, 'ARSCON VALVES CO. L.L.C.', '1 1 1');
+        addText(46, 737, 21, product.name.toUpperCase(), '1 1 1');
+        addText(46, 717, 9, `${product.sku}  |  ${product.category}`, '0.96 0.57 0.25');
+        addText(46, 675, 10, 'PRODUCT OVERVIEW', '0.74 0.29 0.05');
+        const description = wrap(product.description, 96);
+        description.slice(0, 2).forEach((line, index) => addText(46, 656 - index * 14, 9, line, '0.34 0.39 0.42'));
+        commands.push('0.85 0.88 0.87 RG 0.7 w 46 625 m 566 625 l S');
+        const rows = [
+          ['Construction materials', product.constructionMaterials.join(', ')],
+          ['Pressure ratings', product.pressureRatings.join(', ')],
+          ['Size range', `${product.sizeRangeMin} to ${product.sizeRangeMax} inches`],
+          ['End connections', product.endConnections.join(', ')],
+          ['Applicable standards', product.standards.join(', ')],
+          ['Indicative lead time', product.leadTime],
+          ['Current indicative stock', `${product.stock} units`]
+        ];
+        let y = 604;
+        for (const [label, value] of rows) {
+          const valueLines = wrap(value, 57).slice(0, 2);
+          addText(46, y, 9, label, '0.42 0.48 0.51');
+          valueLines.forEach((line, index) => addText(220, y - index * 12, 9, line));
+          y -= 27 + (valueLines.length - 1) * 12;
+          commands.push(`0.91 0.93 0.92 RG 0.5 w 46 ${y + 9} m 566 ${y + 9} l S`);
+        }
+        addText(46, 335, 9, 'Confirm final materials, ratings, dimensions and standards against the approved project specification.', '0.42 0.48 0.51');
+        addText(46, 35, 8, 'Arscon Valves Co. L.L.C.  |  Sharjah, United Arab Emirates', '0.42 0.48 0.51');
+        const stream = commands.join('\n');
+        const objects = [
+          '<< /Type /Catalog /Pages 2 0 R >>',
+          '<< /Type /Pages /Kids [3 0 R] /Count 1 >>',
+          '<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>',
+          '<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>',
+          `<< /Length ${stream.length} >>\nstream\n${stream}\nendstream`
+        ];
+        let pdf = '%PDF-1.4\n';
+        const offsets = [0];
+        objects.forEach((object, index) => {
+          offsets.push(pdf.length);
+          pdf += `${index + 1} 0 obj\n${object}\nendobj\n`;
+        });
+        const xrefOffset = pdf.length;
+        pdf += `xref\n0 ${objects.length + 1}\n0000000000 65535 f \n`;
+        offsets.slice(1).forEach(offset => { pdf += `${String(offset).padStart(10, '0')} 00000 n \n`; });
+        pdf += `trailer\n<< /Size ${objects.length + 1} /Root 1 0 R >>\nstartxref\n${xrefOffset}\n%%EOF`;
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(new Blob([pdf], { type: 'application/pdf' }));
+        link.download = `${product.sku}-data-sheet.pdf`;
+        link.click();
+        setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+      }
+      function showQuoteList() {
+        openModal('Your quote list', 'Request for quotation', true);
+        renderQuoteList();
+      }
+      function renderQuoteList() {
+        const entries = state.quoteItems.map(item => ({ ...item, product: getProduct(item.productId) })).filter(item => item.product);
+        const itemsMarkup = entries.length ? entries.map(({product,quantity}) => `<div class="quote-line"><img src="${esc(product.imageUrl)}" alt=""><div><strong>${esc(product.name)}</strong><small>${esc(product.sku)} &middot; ${esc(product.leadTime)}</small></div><label><span class="sr-only">Quantity for ${esc(product.name)}</span><input class="quantity-input" type="number" min="1" max="10000" value="${quantity}" data-quantity="${product.id}"></label><button class="remove-item" type="button" aria-label="Remove ${esc(product.name)}" data-remove="${product.id}">&times;</button></div>`).join('') : '<div class="empty-state"><strong>Your quote list is empty.</strong><p>Explore the catalogue and add products for a project quotation.</p></div>';
+        body.innerHTML = `<p class="modal-intro">Add the quantities and project details below. This request is for a quotation only; no purchase is made.</p><div class="quote-items">${itemsMarkup}</div><form id="quote-form"><div class="form-grid">
+          <div class="form-field"><label for="company">Company *</label><input id="company" name="company" required maxlength="180" autocomplete="organization"></div><div class="form-field"><label for="contactName">Contact name *</label><input id="contactName" name="contactName" required maxlength="140" autocomplete="name"></div>
+          <div class="form-field"><label for="email">Business email *</label><input id="email" name="email" type="email" required maxlength="254" autocomplete="email"></div><div class="form-field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" maxlength="50" autocomplete="tel"></div>
+          <div class="form-field"><label for="projectReference">Project reference</label><input id="projectReference" name="projectReference" maxlength="160"></div><div class="form-field"><label for="deliveryLocation">Delivery location</label><input id="deliveryLocation" name="deliveryLocation" maxlength="240"></div>
+          <div class="form-field full"><label for="attachments">Technical documents</label><input id="attachments" name="attachments" type="file" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.dwg"><span class="form-hint">Up to 5 files. Keep the combined upload under 7 MB. Files are submitted with this quotation request.</span></div>
+          <div class="form-field full"><label for="notes">Project requirements</label><textarea id="notes" name="notes" maxlength="6000" placeholder="Media, temperature, pressure, applicable standards or other technical notes"></textarea></div>
+        </div><div class="form-error" id="quote-error"></div><div class="modal-actions"><span class="form-hint">Fields marked * are required. We will use your details to respond to this request.</span><button class="button" type="submit" ${entries.length ? '' : 'disabled'}>Submit RFQ <span aria-hidden="true">&#8594;</span></button></div></form>`;
+        body.querySelectorAll('[data-quantity]').forEach(input => input.addEventListener('change', () => {
+          const quantity = Math.max(1, Math.min(10000, Math.floor(Number(input.value) || 1)));
+          const item = state.quoteItems.find(row => row.productId === Number(input.dataset.quantity));
+          if (item) item.quantity = quantity;
+          saveQuoteItems();
+          renderQuoteList();
+        }));
+        body.querySelectorAll('[data-remove]').forEach(button => button.addEventListener('click', () => {
+          state.quoteItems = state.quoteItems.filter(item => item.productId !== Number(button.dataset.remove));
+          saveQuoteItems();
+          renderQuoteList();
+        }));
+        document.getElementById('quote-form').addEventListener('submit', submitQuote);
+      }
+      async function submitQuote(event) {
+        event.preventDefault();
+        const form = event.currentTarget;
+        const error = document.getElementById('quote-error');
+        const submit = form.querySelector('[type="submit"]');
+        const files = [...form.elements.attachments.files];
+        if (!state.quoteItems.length) return showFormError(error, 'Add at least one product before submitting your request.');
+        if (files.length > 5) return showFormError(error, 'Please attach no more than 5 files.');
+        if (files.some(file => file.size > 4 * 1024 * 1024) || files.reduce((sum,file) => sum + file.size,0) > 7 * 1024 * 1024) return showFormError(error, 'Keep each file under 4 MB and the combined upload under 7 MB.');
+        submit.disabled = true;
+        submit.textContent = 'Submitting request...';
+        error.classList.remove('show');
+        try {
+          const attachments = await Promise.all(files.map(file => new Promise((resolve,reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve({ name: file.name, type: file.type, size: file.size, data: String(reader.result).split(',')[1] });
+            reader.onerror = () => reject(new Error(`Could not read ${file.name}.`));
+            reader.readAsDataURL(file);
+          })));
+          const data = Object.fromEntries(new FormData(form).entries());
+          const result = await request('/api/quotes', { method: 'POST', body: JSON.stringify({ ...data, items: state.quoteItems, attachments }) });
+          state.quoteItems = [];
+          saveQuoteItems();
+          body.innerHTML = `<div class="empty-state"><strong>Request received: ${esc(result.quoteNo)}</strong><p>Thank you. The Arscon team will review your requirements and follow up using the business contact details provided.</p></div><div style="margin-top:18px;text-align:right"><button class="button" type="button" id="done-button">Done</button></div>`;
+          document.getElementById('done-button').addEventListener('click', closeModal);
+        } catch (err) {
+          showFormError(error, err.message || 'We could not submit your request. Please try again.');
+          submit.disabled = false;
+          submit.innerHTML = 'Submit RFQ <span aria-hidden="true">&#8594;</span>';
+        }
+      }
+      function showFormError(element, message) { element.textContent = message; element.classList.add('show'); }
+      function teamToken() { return sessionStorage.getItem(TOKEN_KEY) || ''; }
+      function showTeamLogin() {
+        openModal('Team access', 'Sales & operations');
+        body.innerHTML = `<p class="modal-intro">Sign in to review customer enquiries and update their status. Access is restricted to authorised team members.</p><form id="team-form"><div class="form-field"><label for="team-token">Team access token</label><input id="team-token" type="password" autocomplete="current-password" required></div><div class="form-error" id="team-error"></div><div class="modal-actions"><span class="form-hint">Ask your administrator for the server-configured access token. It is held only for this browser session.</span><button class="button" type="submit">Sign in</button></div></form>`;
+        document.getElementById('team-form').addEventListener('submit', async event => {
+          event.preventDefault();
+          const token = document.getElementById('team-token').value;
+          const error = document.getElementById('team-error');
+          try {
+            const summary = await request('/api/admin/summary', { headers: { Authorization: `Bearer ${token}` } });
+            sessionStorage.setItem(TOKEN_KEY, token);
+            showDashboard(summary);
+          } catch (err) { showFormError(error, err.message || 'Unable to sign in.'); }
+        });
+      }
+      async function showDashboard(summary) {
+        openModal('Enquiry dashboard', 'Team workspace', true);
+        const quotes = await request('/api/quotes', { headers: { Authorization: `Bearer ${teamToken()}` } });
+        const rows = quotes.length ? quotes.map(quote => `<tr><td><strong>${esc(quote.quoteNo)}</strong><br>${esc(new Date(quote.createdAt).toLocaleDateString())}</td><td>${esc(quote.company)}<br>${esc(quote.contactName)}</td><td>${esc(quote.email)}<br>${esc(quote.phone || 'No phone provided')}</td><td>${quote.items.map(item => `${esc(item.name)} &times; ${item.quantity}`).join('<br>')}</td><td><select class="status-select" data-status-id="${quote.id}">${['Pending','Reviewing','Quoted','Won','Closed'].map(status => `<option ${quote.status === status ? 'selected' : ''}>${status}</option>`).join('')}</select></td><td><button class="text-button" type="button" data-view-quote="${quote.id}">View request</button></td></tr>`).join('') : '<tr><td colspan="6">No quotation enquiries yet.</td></tr>';
+        body.innerHTML = `<div class="metric-grid"><div class="metric"><span>Catalogue products</span><strong>${Number(summary.productCount).toLocaleString()}</strong></div><div class="metric"><span>Stock units</span><strong>${Number(summary.stockUnits).toLocaleString()}</strong></div><div class="metric"><span>Open enquiries</span><strong>${Number(summary.pendingInquiries).toLocaleString()}</strong></div><div class="metric"><span>Low stock items</span><strong>${Number(summary.lowStockCount).toLocaleString()}</strong></div></div><div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:10px"><strong style="font-size:12px">Recent quotation requests</strong><button class="text-button" type="button" id="team-signout">Sign out</button></div><div class="table-scroll"><table class="dashboard-table"><thead><tr><th>Request</th><th>Company</th><th>Contact</th><th>Items</th><th>Status</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>`;
+        document.getElementById('team-signout').addEventListener('click', () => { sessionStorage.removeItem(TOKEN_KEY); showTeamLogin(); });
+        body.querySelectorAll('[data-view-quote]').forEach(button => button.addEventListener('click', () => showQuoteDetail(button.dataset.viewQuote, summary)));
+        body.querySelectorAll('[data-status-id]').forEach(select => select.addEventListener('change', async () => {
+          try { await request(`/api/quotes/${select.dataset.statusId}`, { method: 'PATCH', headers: { Authorization: `Bearer ${teamToken()}` }, body: JSON.stringify({status: select.value}) }); notify('Enquiry status updated.'); }
+          catch (err) { notify(err.message || 'Could not update enquiry.', true); }
+        }));
+      }
+      async function showQuoteDetail(id, summary) {
+        try {
+          const quote = await request(`/api/quotes/${id}`, { headers: { Authorization: `Bearer ${teamToken()}` } });
+          openModal('Request details', quote.quoteNo, true);
+          const files = quote.attachments.length ? quote.attachments.map((file,index) => `<button class="text-button" type="button" data-download-file="${index}">${esc(file.name)} <span class="form-hint">(${(file.size / 1024).toFixed(0)} KB)</span></button>`).join('<br>') : '<span class="form-hint">No technical files attached.</span>';
+          body.innerHTML = `<div class="form-grid"><div><p class="eyebrow">Customer</p><p><strong>${esc(quote.company)}</strong><br>${esc(quote.contactName)}<br>${esc(quote.email)}<br>${esc(quote.phone || 'No phone provided')}</p></div><div><p class="eyebrow">Project</p><p>${esc(quote.projectReference || 'No project reference')}<br>${esc(quote.deliveryLocation || 'No delivery location')}</p></div><div class="form-field full"><label>Requested items</label><p>${quote.items.map(item => `${esc(item.name)} (${esc(item.sku)}) &times; ${item.quantity}`).join('<br>')}</p></div><div class="form-field full"><label>Technical requirements</label><p>${esc(quote.notes || 'No additional project requirements provided.').replace(/\n/g,'<br>')}</p></div><div class="form-field full"><label>Technical documents</label><div>${files}</div></div></div><div class="modal-actions"><button class="button button-quiet" type="button" id="back-to-enquiries">Back to enquiries</button><span class="form-hint">Submitted ${esc(new Date(quote.createdAt).toLocaleString())}</span></div>`;
+          body.querySelectorAll('[data-download-file]').forEach(button => button.addEventListener('click', () => {
+            const file = quote.attachments[Number(button.dataset.downloadFile)];
+            const binary = atob(file.data);
+            const bytes = Uint8Array.from(binary, character => character.charCodeAt(0));
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(new Blob([bytes], { type: file.type }));
+            link.download = file.name;
+            link.click();
+            setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+          }));
+          document.getElementById('back-to-enquiries').addEventListener('click', () => showDashboard(summary));
+        } catch (error) { notify(error.message || 'Could not load this request.', true); }
+      }
+      async function loadProducts() {
+        try {
+          state.products = await request('/api/products');
+          fillFilters();
+          renderProducts();
+        } catch (error) {
+          document.getElementById('catalog-count').textContent = 'Catalogue unavailable';
+          grid.innerHTML = `<div class="empty-state"><strong>We could not load the product catalogue.</strong><p>${esc(error.message)} Ensure the Arscon server is running, then refresh this page.</p></div>`;
+        }
+      }
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+      updateQuoteCount();
+      loadProducts();
+      ['search-products','filter-category','filter-material','filter-standard'].forEach(id => document.getElementById(id).addEventListener(id === 'search-products' ? 'input' : 'change', renderProducts));
+      grid.addEventListener('click', event => {
+        const add = event.target.closest('[data-add]');
+        const detail = event.target.closest('[data-detail]');
+        if (add) addQuoteItem(Number(add.dataset.add));
+        if (detail) showDetail(getProduct(detail.dataset.detail));
+      });
+      document.querySelectorAll('[data-open-quotes]').forEach(button => button.addEventListener('click', showQuoteList));
+      document.getElementById('team-login').addEventListener('click', showTeamLogin);
+      document.getElementById('footer-team').addEventListener('click', showTeamLogin);
+      document.getElementById('modal-close').addEventListener('click', closeModal);
+      backdrop.addEventListener('click', event => { if (event.target === backdrop) closeModal(); });
+      document.addEventListener('keydown', closeOnEscape);
+      const menu = document.getElementById('mobile-menu');
+      menu.addEventListener('click', () => {
+        const nav = document.getElementById('main-nav');
+        const opened = nav.classList.toggle('open');
+        menu.setAttribute('aria-expanded', String(opened));
+      });
+      document.getElementById('main-nav').addEventListener('click', event => {
+        if (event.target.closest('a')) { document.getElementById('main-nav').classList.remove('open'); menu.setAttribute('aria-expanded','false'); }
+      });
+      if (teamToken()) {
+        request('/api/admin/summary', { headers: { Authorization: `Bearer ${teamToken()}` } }).then(showDashboard).catch(() => sessionStorage.removeItem(TOKEN_KEY));
+      }
+    })();
+  </script>
+</body>
+</html>

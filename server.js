@@ -7,7 +7,7 @@ const { timingSafeEqual } = require('node:crypto');
 const { DatabaseSync } = require('node:sqlite');
 
 const root = __dirname;
-const dataDir = path.join(root, 'data');
+const dataDir = process.env.ARSCON_DATA_DIR ? path.resolve(process.env.ARSCON_DATA_DIR) : path.join(root, 'data');
 fs.mkdirSync(dataDir, { recursive: true });
 const db = new DatabaseSync(path.join(dataDir, 'arscon.sqlite'));
 

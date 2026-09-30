@@ -1,0 +1,21 @@
+[Unit]
+Description=Arscon procurement portal
+After=network.target
+
+[Service]
+Type=simple
+User=arscon
+Group=arscon
+WorkingDirectory=/opt/arscon
+EnvironmentFile=/etc/arscon/arscon.env
+ExecStart=/usr/bin/node /opt/arscon/server.js
+Restart=on-failure
+RestartSec=5
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/arscon
+
+[Install]
+WantedBy=multi-user.target

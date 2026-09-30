@@ -32,3 +32,33 @@ The included SQLite service is a local starter implementation, not an architectu
 ## GitHub
 
 The source is connected to [drabdulbasid/juned-arscon](https://github.com/drabdulbasid/juned-arscon) on the `main` branch. `.gitignore` excludes the local database, secrets and workspace task file. The supplied business profile, prompt documents and generated local datasheet were not included in the repository.
+
+## Hostinger VPS deployment
+
+The example configuration deploys to `valves.drabdulbasid.com` and leaves the root domain unchanged. Add an A record for `valves` in Hostinger DNS pointing to the VPS IPv4 address. Do not change the root (`@`) record. Allow inbound ports 22, 80 and 443 in the Hostinger VPS firewall; the Node port stays private behind Nginx.
+
+Connect to the VPS using your own terminal, install Node.js 24, Git, Nginx and Certbot, then run:
+
+```sh
+sudo useradd --system --home /opt/arscon --shell /usr/sbin/nologin arscon
+sudo install -d -o arscon -g arscon /var/lib/arscon /etc/arscon
+sudo git clone --branch main --depth 1 https://github.com/drabdulbasid/juned-arscon.git /opt/arscon
+sudo chown -R root:arscon /opt/arscon
+sudo install -m 644 /opt/arscon/deploy/arscon.service /etc/systemd/system/arscon.service
+```
+
+Create the private service environment and generate its admin token on the VPS (the token is written directly to the root-only service configuration, not printed):
+
+```sh
+sudo sh -c 'printf "HOST=127.0.0.1\nPORT=3001\nARSCON_DATA_DIR=/var/lib/arscon\nARSCON_ADMIN_TOKEN=%s\n" "$(openssl rand -hex 32)" > /etc/arscon/arscon.env'
+sudo chown root:arscon /etc/arscon/arscon.env
+sudo chmod 640 /etc/arscon/arscon.env
+sudo install -d /etc/nginx/sites-available /etc/nginx/sites-enabled
+sudo install -m 644 /opt/arscon/deploy/nginx-valves.conf /etc/nginx/sites-available/arscon
+sudo ln -sfn /etc/nginx/sites-available/arscon /etc/nginx/sites-enabled/arscon
+sudo nginx -t && sudo systemctl enable --now arscon
+sudo systemctl reload nginx
+sudo certbot --nginx -d valves.drabdulbasid.com
+```
+
+The database persists in `/var/lib/arscon` across code updates. After DNS has resolved to the VPS and the first deployment is running, update with `cd /opt/arscon && sudo git pull --ff-only && sudo systemctl restart arscon`. Confirm the public site and RFQ flow after deployment. This starter still needs production review for customer-data retention, upload scanning, backups, rate limiting, monitoring and email delivery before accepting real business inquiries.

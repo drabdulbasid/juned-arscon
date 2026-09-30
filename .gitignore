@@ -4,3 +4,4 @@ data/*.sqlite-wal
 .env
 node_modules/
 .vscode/tasks.json
+arscon-hostinger-upload.zip

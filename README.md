@@ -37,7 +37,17 @@ The source is connected to [drabdulbasid/juned-arscon](https://github.com/drabdu
 
 ### Hostinger Web App
 
-The Hostinger hPanel screenshot confirms Web Apps are available on this account. Deploy a separate app so the existing root-domain website stays untouched:
+The Hostinger Web App is deployed at `https://valves.drabdulbasid.com`; the existing root-domain website remains untouched. The initial deployment used a ZIP upload because the GitHub repository picker did not advance. This does not auto-deploy when GitHub changes.
+
+To make an updated upload from the project root in PowerShell, run:
+
+```powershell
+Compress-Archive -Path index.html,server.js,package.json -DestinationPath arscon-hostinger-upload.zip -Force
+```
+
+In hPanel, upload that ZIP to the existing Web App and deploy it. Do not include `data/` or secrets in the archive. The current app stores SQLite under its app `data` directory; back it up and confirm Hostinger preserves that directory before redeploying or accepting real RFQs. Hostinger Daily Backup should be confirmed to cover the Web App's SQLite file.
+
+For future GitHub auto-deploys, the hPanel flow is:
 
 1. In hPanel, open **Websites → Add Website → Deploy Web App** and choose GitHub.
 2. Authorize Hostinger to access `drabdulbasid/juned-arscon`, then select the `main` branch.

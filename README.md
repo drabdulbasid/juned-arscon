@@ -31,4 +31,4 @@ The included SQLite service is a local starter implementation, not an architectu
 
 ## GitHub
 
-This workspace did not contain a Git repository or configured remote when the portal was created. `.gitignore` excludes the local database and secrets. Linking or pushing to `juned-arscon` requires its exact GitHub URL/owner and an authenticated GitHub account with write access; repository permissions must be granted by its owner through GitHub.
+The source is connected to [drabdulbasid/juned-arscon](https://github.com/drabdulbasid/juned-arscon) on the `main` branch. `.gitignore` excludes the local database, secrets and workspace task file. The supplied business profile, prompt documents and generated local datasheet were not included in the repository.

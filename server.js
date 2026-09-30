@@ -229,7 +229,7 @@ async function handle(req, res) {
   return json(res, 404, { error: 'Not found.' });
 }
 
-const host = process.env.HOST || '127.0.0.1';
+const host = process.env.HOST || (process.env.NODE_ENV === 'production' ? '0.0.0.0' : '127.0.0.1');
 const port = Number(process.env.PORT) || 3001;
 const server = http.createServer((req, res) => handle(req, res).catch(error => {
   if (!res.headersSent) json(res, error.status || 500, { error: error.message || 'Internal server error.' });

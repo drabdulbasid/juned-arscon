@@ -35,6 +35,21 @@ The source is connected to [drabdulbasid/juned-arscon](https://github.com/drabdu
 
 ## Hostinger VPS deployment
 
+### Hostinger Web App
+
+The Hostinger hPanel screenshot confirms Web Apps are available on this account. Deploy a separate app so the existing root-domain website stays untouched:
+
+1. In hPanel, open **Websites → Add Website → Deploy Web App** and choose GitHub.
+2. Authorize Hostinger to access `drabdulbasid/juned-arscon`, then select the `main` branch.
+3. Select Node.js 22.5 or newer, use `npm start` as the start command, and leave the build command empty.
+4. Add environment variables in the app settings: `NODE_ENV=production` and `ARSCON_ADMIN_TOKEN` set to a long random secret generated/stored in hPanel. Do not commit the token.
+5. Assign a new subdomain, `valves.drabdulbasid.com`. If hPanel warns that an existing website must be removed to use a domain, stop and choose the new subdomain instead; do not replace the current root site.
+6. Deploy, then verify `/api/health` and submit a test RFQ. Confirm with Hostinger support that the app's `data` directory is writable and retained across deployments/restores before accepting customer inquiries; `ARSCON_DATA_DIR` can point to another persistent writable directory if Hostinger provides one.
+
+The app binds to `0.0.0.0` when `NODE_ENV=production` and uses Hostinger's `PORT` environment variable. The local development default remains `127.0.0.1`. Hostinger's Daily Backup should be confirmed to include the Web App files and its SQLite data, not just the existing website. The portal currently provides local PDF downloads only; it does not send RFQ email notifications.
+
+### VPS alternative
+
 The example configuration deploys to `valves.drabdulbasid.com` and leaves the root domain unchanged. Add an A record for `valves` in Hostinger DNS pointing to the VPS IPv4 address. Do not change the root (`@`) record. Allow inbound ports 22, 80 and 443 in the Hostinger VPS firewall; the Node port stays private behind Nginx.
 
 Connect to the VPS using your own terminal, install Node.js 24, Git, Nginx and Certbot, then run:

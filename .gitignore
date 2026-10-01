@@ -5,3 +5,7 @@ data/*.sqlite-wal
 node_modules/
 .vscode/tasks.json
 arscon-hostinger-upload.zip
+hero-original.jpg
+retouch-photo.cjs
+assets/arscon-hero-clone.png
+assets/arscon-hero-ns.png

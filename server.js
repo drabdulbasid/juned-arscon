@@ -8,6 +8,7 @@ const { DatabaseSync } = require('node:sqlite');
 
 const root = __dirname;
 const dataDir = process.env.ARSCON_DATA_DIR ? path.resolve(process.env.ARSCON_DATA_DIR) : path.join(root, 'data');
+const heroImageUrl = '/assets/arscon-hero-clean.png';
 fs.mkdirSync(dataDir, { recursive: true });
 const db = new DatabaseSync(path.join(dataDir, 'arscon.sqlite'));
 
@@ -55,7 +56,7 @@ db.exec(`
 `);
 
 const seeds = [
-  ['GATE-150-CS', 'Cast Steel Gate Valve', 'Gate valves', 'Bolted bonnet, OS&Y rising stem, flexible wedge design for reliable isolation in demanding process lines.', ['A216 WCB', 'A351 CF8M'], ['Class 150', 'Class 300', 'Class 600'], 2, 24, ['Flanged RF', 'BW'], ['API 600', 'ASME B16.34', 'API 598'], 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=960&q=82', 48, '2-3 weeks'],
+  ['GATE-150-CS', 'Cast Steel Gate Valve', 'Gate valves', 'Bolted bonnet, OS&Y rising stem, flexible wedge design for reliable isolation in demanding process lines.', ['A216 WCB', 'A351 CF8M'], ['Class 150', 'Class 300', 'Class 600'], 2, 24, ['Flanged RF', 'BW'], ['API 600', 'ASME B16.34', 'API 598'], heroImageUrl, 48, '2-3 weeks'],
   ['BALL-3PC-316', '3-Piece Ball Valve', 'Ball valves', 'Full-bore, blowout-proof stem and fire-safe design for dependable quarter-turn service.', ['A351 CF8M', 'A105'], ['Class 150', 'Class 300', '1000 WOG'], 0.5, 8, ['NPT', 'SW', 'BW', 'Flanged'], ['API 608', 'ASME B16.34', 'API 607'], 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=960&q=82', 126, '1-2 weeks'],
   ['GLOBE-BB-800', 'Pressure Seal Globe Valve', 'Globe valves', 'Pressure-seal bonnet with guided disc for throttling and high-pressure steam applications.', ['A182 F22', 'A182 F91', 'A105'], ['Class 800', 'Class 1500'], 0.5, 4, ['SW', 'NPT'], ['API 602', 'ASME B16.34', 'BS 5352'], 'https://images.unsplash.com/photo-1567789884554-0b844b597180?auto=format&fit=crop&w=960&q=82', 34, '4-5 weeks'],
   ['BUTTERFLY-DI-EPDM', 'Double Offset Butterfly Valve', 'Butterfly valves', 'High-performance resilient-seat butterfly valve for water, HVAC and general utility networks.', ['Ductile Iron', 'A216 WCB', 'Duplex 2205'], ['Class 150', 'PN 10', 'PN 16'], 2, 48, ['Wafer', 'Lug', 'Flanged'], ['API 609', 'EN 593', 'EN 12266'], 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=960&q=82', 73, '2-3 weeks'],
@@ -63,7 +64,7 @@ const seeds = [
   ['DIAPH-WEIR-PVC', 'Weir Diaphragm Valve', 'Diaphragm valves', 'Corrosion-resistant weir-pattern body for chemical dosing, water treatment and aggressive media.', ['PVC-U', 'PP', 'A351 CF8M'], ['PN 10', 'PN 16'], 0.5, 6, ['Flanged', 'Socket', 'Threaded'], ['EN 13397', 'ISO 5208'], 'https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=960&q=82', 57, '2-3 weeks'],
   ['Y-STRAINER-CS', 'Bolted Cover Y-Strainer', 'Strainers', 'Compact cast-body strainer with removable screen to protect downstream pumps and control equipment.', ['A216 WCB', 'A351 CF8M'], ['Class 150', 'Class 300'], 0.5, 12, ['Flanged RF', 'NPT', 'SW'], ['ASME B16.34', 'MSS SP-71'], 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&w=960&q=82', 92, '1-2 weeks'],
   ['STEAM-TRAP-FLOAT', 'Float & Thermostatic Trap', 'Steam traps', 'Continuous condensate discharge with air venting for heat exchangers and process equipment.', ['A216 WCB', 'A351 CF8M'], ['Class 150', 'Class 300'], 0.5, 4, ['Flanged', 'NPT', 'SW'], ['ASME B16.34', 'ISO 6552'], 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=960&q=82', 41, '3-4 weeks'],
-  ['KNIFE-GATE-SLURRY', 'Slurry Knife Gate Valve', 'Gate valves', 'Rugged one-piece casting with replaceable liner for abrasive, high-solids and slurry services.', ['A216 WCB', 'Duplex 2205', 'CF8M'], ['PN 10', 'PN 16'], 2, 36, ['Wafer', 'Lug'], ['MSS SP-81', 'EN 558'], 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=960&q=82', 18, '5-6 weeks']
+  ['KNIFE-GATE-SLURRY', 'Slurry Knife Gate Valve', 'Gate valves', 'Rugged one-piece casting with replaceable liner for abrasive, high-solids and slurry services.', ['A216 WCB', 'Duplex 2205', 'CF8M'], ['PN 10', 'PN 16'], 2, 36, ['Wafer', 'Lug'], ['MSS SP-81', 'EN 558'], heroImageUrl, 18, '5-6 weeks']
 ];
 
 const insertProduct = db.prepare(`
@@ -74,6 +75,7 @@ const insertProduct = db.prepare(`
 for (const row of seeds) {
   insertProduct.run(row[0], row[1], row[2], row[3], JSON.stringify(row[4]), JSON.stringify(row[5]), row[6], row[7], JSON.stringify(row[8]), JSON.stringify(row[9]), row[10], row[11], row[12]);
 }
+db.prepare('UPDATE products SET image_url = ? WHERE image_url LIKE ?').run(heroImageUrl, '%photo-1581092160607-ee22621dd758%');
 
 const productRows = db.prepare('SELECT * FROM products ORDER BY category, name');
 const quoteRows = db.prepare(`
@@ -139,6 +141,11 @@ function readBody(req) {
 async function handle(req, res) {
   const url = new URL(req.url, 'http://localhost');
   if (req.method === 'GET' && url.pathname === '/api/health') return json(res, 200, { ok: true, database: 'sqlite' });
+
+  if (req.method === 'GET' && url.pathname === heroImageUrl) {
+    res.writeHead(200, { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=31536000, immutable', 'X-Content-Type-Options': 'nosniff' });
+    return fs.createReadStream(path.join(root, 'assets', 'arscon-hero-clean.png')).pipe(res);
+  }
 
   if (req.method === 'GET' && url.pathname === '/api/products') {
     const products = productRows.all().map(productJson);

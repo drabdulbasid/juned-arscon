@@ -42,7 +42,7 @@ The Hostinger Web App is deployed at `https://valves.drabdulbasid.com`; the exis
 To make an updated upload from the project root in PowerShell, run:
 
 ```powershell
-Compress-Archive -Path index.html,server.js,package.json,assets/arscon-hero-clean.png -DestinationPath arscon-hostinger-upload.zip -Force
+Compress-Archive -Path index.html,server.js,package.json,arscon-hero-clean.png -DestinationPath arscon-hostinger-upload.zip -Force
 ```
 
 In hPanel, upload that ZIP to the existing Web App and deploy it. Do not include `data/` or secrets in the archive. The current app stores SQLite under its app `data` directory; back it up and confirm Hostinger preserves that directory before redeploying or accepting real RFQs. Hostinger Daily Backup should be confirmed to cover the Web App's SQLite file.

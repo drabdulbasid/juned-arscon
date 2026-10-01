@@ -8,7 +8,7 @@ const { DatabaseSync } = require('node:sqlite');
 
 const root = __dirname;
 const dataDir = process.env.ARSCON_DATA_DIR ? path.resolve(process.env.ARSCON_DATA_DIR) : path.join(root, 'data');
-const heroImageUrl = '/assets/arscon-hero-clean.png';
+const heroImageUrl = '/arscon-hero-clean.png';
 fs.mkdirSync(dataDir, { recursive: true });
 const db = new DatabaseSync(path.join(dataDir, 'arscon.sqlite'));
 
@@ -144,7 +144,7 @@ async function handle(req, res) {
 
   if (req.method === 'GET' && url.pathname === heroImageUrl) {
     res.writeHead(200, { 'Content-Type': 'image/png', 'Cache-Control': 'public, max-age=31536000, immutable', 'X-Content-Type-Options': 'nosniff' });
-    return fs.createReadStream(path.join(root, 'assets', 'arscon-hero-clean.png')).pipe(res);
+    return fs.createReadStream(path.join(root, 'arscon-hero-clean.png')).pipe(res);
   }
 
   if (req.method === 'GET' && url.pathname === '/api/products') {
